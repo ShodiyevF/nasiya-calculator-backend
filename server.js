@@ -10,6 +10,8 @@ app.use((req, res, next) => {
     next()
 })
 
+const PORT = process.env.PORT || 3000
+
 const pool = new Pool({
     host: "localhost",
     user: "nasiya",
@@ -49,4 +51,4 @@ app.get('/', async (req, res) => {
     res.send(data)
 })
 
-app.listen(3000, () => console.log('Manimcha ishladi'))
+app.listen(PORT, () => console.log('Manimcha ishladi'))
